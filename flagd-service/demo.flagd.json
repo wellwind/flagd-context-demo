@@ -1,0 +1,27 @@
+{
+  "$schema": "https://flagd.dev/schema/v0/flags.json",
+  "flags": {
+    "my-flag": {
+      "state": "ENABLED",
+      "variants": {
+        "on": true,
+        "off": false
+      },
+      "defaultVariant": "off",
+      "targeting": {
+        "if": [
+          {
+            "===": [
+              {
+                "var": "user"
+              },
+              "mike"
+            ]
+          },
+          "on",
+          "off"
+        ]
+      }
+    }
+  }
+}
